@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/review_vendor_bg"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/review_userImage"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/netflix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/review_userImage"
+            app:layout_constraintTop_toTopOf="@+id/review_userImage"
+            android:text="User name"
+            android:textColor="#6A6A6A"
+            android:textSize="@dimen/_11sdp"
+            android:maxLength="30"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="@dimen/_8sdp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/text_userName"
+            app:layout_constraintTop_toBottomOf="@+id/text_userName">
+
+
+        <TextView
+            android:id="@+id/text_reviewRatingNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#FEA500"
+            android:fontFamily="@font/poppins_bold"/>
+
+            <TextView
+                android:id="@+id/text_zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=".0"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintStart_toEndOf="@+id/text_reviewRatingNo"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#FEA500"
+                android:fontFamily="@font/poppins_bold"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/const_rating"
+            android:numStars="5"
+            android:rating="4"
+            android:stepSize="1"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:progressTint="#FEA500"
+            android:isIndicator="true"
+            app:layout_constraintTop_toTopOf="@+id/const_rating"
+            app:layout_constraintBottom_toBottomOf="@+id/const_rating"
+             android:transformPivotX="0dp"
+            android:transformPivotY="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

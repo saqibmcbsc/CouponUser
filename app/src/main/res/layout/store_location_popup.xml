@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_230sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   app:cardBackgroundColor="@color/white"
+    app:cardElevation="-10dp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_yourLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/edt_bg"
+            android:hint="Your Location"
+            android:textColor="@color/light_orange"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:editable="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false"
+            android:textSize="@dimen/_12sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:textColorHint="#AEAEAE"/>
+
+        <EditText
+            android:id="@+id/edt_Destination"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/edt_bg"
+            android:hint="Destination"
+            android:textColor="@color/light_orange"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:editable="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false"
+            android:textSize="@dimen/_12sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:textColorHint="#AEAEAE"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btn_navigate"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="11"
+           android:background="@drawable/button_bg"
+           android:layout_marginTop="@dimen/_20sdp"
+           android:text="Navigate"
+           android:textColor="@color/white"
+           android:textAllCaps="false"
+           android:fontFamily="@font/poppins_bold"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

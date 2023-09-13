@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_selectCoupon"
+        android:layout_width="@dimen/_135sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardElevation="-10dp"
+        app:cardBackgroundColor="#F3F1F1"
+        app:cardCornerRadius="@dimen/_12sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_8sdp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_selectCoupon"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/disney"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_brandName_selectCoupon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/img_selectCoupon"
+                app:layout_constraintTop_toTopOf="@+id/img_selectCoupon"
+                app:layout_constraintBottom_toBottomOf="@+id/img_selectCoupon"
+                app:layout_constraintEnd_toStartOf="@+id/const_saved"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:maxLines="2"
+                android:text="Disney Hotstar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_7sdp"
+                android:fontFamily="@font/dmsens_bold"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_selectCoupon"
+                app:layout_constraintBottom_toBottomOf="@+id/img_selectCoupon"
+                android:layout_marginEnd="@dimen/_8sdp">
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:lottie_rawRes="@raw/anmmi"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_selectCoupon"
+                android:layout_marginTop="10dp"
+                android:background="#C8C5C5"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_parcent"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:background="@drawable/parcent_bg">
+
+                <TextView
+                    android:id="@+id/text_parcent_selectCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="50%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:maxLength="3"
+                    android:fontFamily="@font/dmsens_bold"
+                    android:layout_marginTop="@dimen/_4sdp"/>
+
+                <TextView
+                    android:id="@+id/text_off_selectCoupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/text_parcent_selectCoupon"
+                    app:layout_constraintTop_toBottomOf="@+id/text_parcent_selectCoupon"
+                    android:text="off"
+                    android:maxLength="3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:fontFamily="@font/dmsens_bold"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/text_validUpto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                android:text="Valid upto"
+                android:textColor="#ADADAD"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/const_parcent"
+                android:fontFamily="@font/dmsens_medium"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/_8sdp"/>
+
+            <TextView
+                android:id="@+id/text_validDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/text_validUpto"
+                android:text="31st Dec, 2023"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/const_parcent"
+                android:fontFamily="@font/dmsens_medium"
+                android:maxLines="1"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_24sdp"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/text_validDate"
+                android:background="@drawable/redem_now_bg"
+                android:layout_marginTop="@dimen/_16sdp">
+
+                <TextView
+                    android:id="@+id/text_redemNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Redeemed"
+                    android:maxLines="2"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:fontFamily="@font/dmsens_medium"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

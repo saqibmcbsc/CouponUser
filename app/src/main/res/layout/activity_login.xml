@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Login_Activity"
+    android:background="@color/app_colorCode">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingBottom="@dimen/_40sdp">
+
+
+            <ImageView
+                android:id="@+id/const_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:src="@drawable/img_welcome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/text_phoneNumber"
+                app:layout_constraintBottom_toTopOf="@+id/text_phoneNumber"
+                android:text="Login"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:fontFamily="@font/dmsens_bold"/>
+
+            <TextView
+                android:id="@+id/text_phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/const_welcome"
+                app:layout_constraintTop_toBottomOf="@+id/const_welcome"
+                android:text="Phone number"
+                android:textColor="@color/blue_text"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:fontFamily="@font/dmsens_bold"
+                android:textSize="@dimen/_10sdp"/>
+
+            <EditText
+                android:id="@+id/edt_numberLogin"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                app:layout_constraintStart_toStartOf="@+id/text_phoneNumber"
+                app:layout_constraintTop_toBottomOf="@+id/text_phoneNumber"
+                app:layout_constraintEnd_toEndOf="@+id/const_welcome"
+                android:background="@drawable/edt_bg"
+                android:hint="Enter Your Number"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:textColor="@color/light_orange"
+                android:digits="1234567890"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:textColorHint="#AEAEAE"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_conditionLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/edt_numberLogin"
+                app:layout_constraintTop_toBottomOf="@+id/edt_numberLogin"
+                android:text="Term &amp; conditions are applied"
+                android:textColor="#AAA6B9"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/dmsens_medium"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nextLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_conditionLogin"
+                android:background="@drawable/button_bg"
+                android:text="Request Otp"
+                android:fontFamily="@font/dmsens_bold"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:ems="15"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_nextLogin"
+                android:layout_marginTop="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/text_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="have an account? "
+                    android:textColor="@color/blueLight_text"
+                    android:fontFamily="@font/dmsens_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_signUp_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up "
+                    android:textColor="@color/light_orange"
+                    android:fontFamily="@font/dmsens_medium"
+                    app:layout_constraintStart_toEndOf="@+id/text_log"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

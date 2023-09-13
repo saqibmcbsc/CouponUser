@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_store"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="-10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_store"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintStart_toStartOf="@+id/const_coupon"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/spotify"
+                 />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+
+                <ImageView
+                    android:id="@+id/img_coupons"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/couponsss"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/couponNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/img_coupons"
+                    app:layout_constraintTop_toTopOf="@+id/img_coupons"
+                    app:layout_constraintBottom_toBottomOf="@id/img_coupons"
+                    android:text="266"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:textColor="#222222" />
+
+                <TextView
+                    android:id="@+id/text_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/couponNumber"
+                    app:layout_constraintTop_toTopOf="@+id/couponNumber"
+                    app:layout_constraintBottom_toBottomOf="@+id/couponNumber"
+                     android:layout_marginStart="@dimen/_4sdp"
+                    android:textColor="#222222"
+                    android:text="Coupons"/>
+
+                <ImageView
+                    android:id="@+id/start_image"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    app:layout_constraintStart_toEndOf="@+id/text_coupon"
+                    app:layout_constraintTop_toTopOf="@+id/text_coupon"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_coupon"
+                    android:src="@drawable/star_icon"
+                    android:layout_marginStart="@dimen/_12sdp"/>
+
+                <TextView
+                    android:id="@+id/text_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/start_image"
+                    app:layout_constraintTop_toTopOf="@+id/start_image"
+                    app:layout_constraintBottom_toBottomOf="@+id/start_image"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="4.5"/>
+
+                <TextView
+                    android:id="@+id/texts_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/text_rating"
+                    app:layout_constraintTop_toTopOf="@+id/text_rating"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_rating"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="Rating"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0.2dp"
+                android:layout_height="@dimen/_80sdp"
+                android:background="#B3B3B3"
+                app:layout_constraintStart_toEndOf="@+id/img_store"
+                app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="@+id/img_store"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+               />
+
+            <TextView
+                android:id="@+id/text_storeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/img_store"
+                android:textColor="@color/black"
+                android:text="Store name"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginStart="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_storeSummery"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toBottomOf="@+id/text_storeName"
+                android:textColor="#606060"
+                android:text="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum fggbgbcbccbbc sdfdf grgtg gtthrth rgttgtg trtghfhg ghft "
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintBottom_toTopOf="@+id/const_coupon"
+                android:textSize="@dimen/_11sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_4sdp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

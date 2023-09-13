@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/fragmentContai"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DashBoard_Activity"
+    android:background="@drawable/dash_background">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"/>
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        app:backgroundColor="@color/white"
+        app:textColor="@color/light_orange"
+        app:textSize="@dimen/_8sdp"
+        app:iconSize="@dimen/_20sdp"
+        app:indicatorColor="#FDDED5"
+        app:indicatorRadius="@dimen/_14sdp"
+        app:sideMargins="@dimen/_8sdp"
+        android:visibility="visible"
+        app:itemPadding="@dimen/_8sdp"
+        app:iconTint="#000000"
+        app:iconTintActive="@color/light_orange"
+        app:cornerRadius="@dimen/_18sdp"
+        app:corners="top_left|top_right"
+        app:menu="@menu/clock_tabs"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

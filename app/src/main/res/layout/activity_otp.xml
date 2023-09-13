@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Otp_Activity"
+    android:background="@color/app_colorCode">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:id="@+id/text_otpVerify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Verify your number"
+                android:textColor="@color/blue_text"
+                android:fontFamily="@font/dmsens_bold"
+                android:textSize="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_60sdp"/>
+
+            <ImageView
+                android:id="@+id/img_otp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                app:layout_constraintStart_toStartOf="@+id/text_otpVerify"
+                app:layout_constraintTop_toBottomOf="@+id/text_otpVerify"
+                app:layout_constraintEnd_toEndOf="@+id/text_otpVerify"
+                android:src="@drawable/otp_image"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_otp"
+                android:layout_marginTop="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/otp_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_28sdp"
+                    android:background="@null"
+                    android:textColor="#4B4A4A"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/dmsens_bold"
+                    android:text="Time Left:"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/otp_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:textColor="#D30B0B"
+                    android:fontFamily="@font/dmsens_bold"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    app:layout_constraintStart_toEndOf="@+id/otp_Text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.chaos.view.PinView
+                android:id="@+id/pinview"
+                app:itemCount="4"
+                app:itemWidth="@dimen/_40sdp"
+                app:itemHeight="@dimen/_40sdp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:itemBackground="@color/white"
+                app:lineColor="@color/light_orange"
+                app:lineWidth="2dp"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:cursorVisible="true"
+                app:hideLineWhenFilled="false"
+                android:textColor="@color/light_orange"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:cursorColor="@color/light_orange"
+                app:cursorWidth="@dimen/_1sdp"
+                app:itemRadius="@dimen/_8sdp"
+                app:itemSpacing="@dimen/_12sdp"
+                style="@style/PinWidget.PinView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/const_timer"
+                tools:ignore="NotSibling"
+                />
+            <TextView
+                android:id="@+id/btn_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:fontFamily="@font/dmsens_bold"
+                android:gravity="center_vertical"
+                android:text="resend OTP"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinview"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submitOtp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/pinview"
+                app:layout_constraintTop_toBottomOf="@+id/btn_resend_otp"
+                app:layout_constraintEnd_toEndOf="@+id/pinview"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:text="Submit"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/dmsens_bold"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragment">
+
+    <fragment
+        android:id="@id/first_fragment"
+        android:name="com.couponusers.couponuser.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+    </fragment>
+    <fragment
+        android:id="@id/second_fragment"
+        android:name="com.couponusers.couponuser.Fragments.TotalCoupons_Fragment"
+        android:label="fragment_total_coupons_"
+        tools:layout="@layout/fragment_total_coupons_" >
+
+    </fragment>
+    <fragment
+        android:id="@id/third_fragment"
+        android:name="com.couponusers.couponuser.Fragments.Review_Fragment"
+        android:label="fragment_review_"
+        tools:layout="@layout/fragment_review_" >
+
+    </fragment>
+    <fragment
+        android:id="@id/fourth_fragment"
+        android:name="com.couponusers.couponuser.Fragments.Profile_Fragment"
+        android:label="fragment_profile_"
+        tools:layout="@layout/fragment_profile_" />
+</navigation>

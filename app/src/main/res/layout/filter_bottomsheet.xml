@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet_bg"
+   >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="80dp">
+
+        <TextView
+            android:id="@+id/text_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:fontFamily="@font/dmsens_bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/discount"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/text_filter"-->
+<!--            android:text="Discount"-->
+<!--            android:textColor="@color/black"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/text_filter"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/text_filter"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textSize="16sp"-->
+<!--            android:fontFamily="@font/dmsens_medium"/>-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/const_discount"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/discount"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/discount"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/discount"-->
+<!--            android:layout_marginTop="10dp">-->
+
+
+
+<!--          <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--              android:id="@+id/const_twenty"-->
+<!--              android:layout_width="wrap_content"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              app:layout_constraintStart_toStartOf="parent"-->
+<!--              app:layout_constraintTop_toTopOf="parent">-->
+
+<!--              <ImageView-->
+<!--                  android:id="@+id/unclick_20"-->
+<!--                  android:layout_width="@dimen/_72sdp"-->
+<!--                  android:layout_height="40dp"-->
+<!--                  app:layout_constraintStart_toStartOf="parent"-->
+<!--                  app:layout_constraintTop_toTopOf="parent"-->
+<!--                  android:scaleType="fitXY"-->
+<!--                  android:src="@drawable/twenty_unclick"/>-->
+
+<!--              <ImageView-->
+<!--                  android:id="@+id/click_20"-->
+<!--                  android:layout_width="@dimen/_72sdp"-->
+<!--                  android:layout_height="40dp"-->
+<!--                  app:layout_constraintStart_toStartOf="parent"-->
+<!--                  app:layout_constraintTop_toTopOf="parent"-->
+<!--                  android:scaleType="fitXY"-->
+<!--                  android:src="@drawable/twenty_click"-->
+<!--                  android:visibility="gone"/>-->
+
+<!--          </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/const_thirty"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/const_twenty"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/const_fourty"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/unclick_30"-->
+<!--                    android:layout_width="@dimen/_82sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/thirty_unclick"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/click_30"-->
+<!--                    android:layout_width="@dimen/_82sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/thirty_click"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/const_fourty"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/unclick_40"-->
+<!--                    android:layout_width="@dimen/_102sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/fourty_unclick"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/click_40"-->
+<!--                    android:layout_width="@dimen/_102sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/fourty_click"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/const_fifty"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/const_twenty"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/unclick_50"-->
+<!--                    android:layout_width="@dimen/_102sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/fifty_unclick"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/click_50"-->
+<!--                    android:layout_width="@dimen/_102sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/fifty_click"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/const_sixty"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/const_fifty"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/const_eighty"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/const_thirty"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/unclick_60"-->
+<!--                    android:layout_width="@dimen/_82sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/sixty_unclick"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/click_60"-->
+<!--                    android:layout_width="@dimen/_82sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/sixty_click"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/const_eighty"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/const_fourty"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/unclick_80"-->
+<!--                    android:layout_width="@dimen/_72sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/eighty_unclick"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/click_80"-->
+<!--                    android:layout_width="@dimen/_72sdp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/eighty_click"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/exp_Date"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/const_discount"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/const_discount"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/const_discount"-->
+<!--            android:text="Expiration date"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:fontFamily="@font/dmsens_bold"/>-->
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/edt_expDate"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/_42sdp"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/exp_Date"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/exp_Date"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/exp_Date"-->
+<!--            android:background="@drawable/calender_exp_bg"-->
+<!--            android:hint="   Choose from calendar"-->
+<!--            android:clickable="false"-->
+<!--            android:focusableInTouchMode="false"-->
+<!--            android:cursorVisible="false"-->
+<!--            android:focusable="false"-->
+<!--            android:editable="false"-->
+<!--            android:drawableStart="@drawable/calender"-->
+<!--            android:paddingEnd="10dp"-->
+<!--            android:textColor="@color/light_orange"-->
+<!--            android:inputType="textPostalAddress"-->
+<!--            android:drawableEnd="@drawable/arrow_go_orange"-->
+<!--            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890,/|()."-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:textSize="15sp"-->
+<!--            android:paddingStart="10dp"-->
+<!--            android:textColorHint="#AEAEAE"/>-->
+
+                  <TextView
+                    android:id="@+id/text_rangeSeekBar"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/text_filter"
+                   android:text="Range"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/text_filter"
+                    app:layout_constraintTop_toBottomOf="@+id/text_filter"
+                   android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/dmsens_medium"/>
+
+                <TextView
+                    android:id="@+id/text_numberKm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/text_rangeKm"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_rangeKm"
+                    app:layout_constraintEnd_toStartOf="@+id/text_rangeKm"
+                    android:text="0"
+                    android:maxLength="3"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dmsens_bold"/>
+
+
+                <TextView
+                    android:id="@+id/text_rangeKm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/text_rangeSeekBar"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_rangeSeekBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Km"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dmsens_bold"/>
+
+
+                <SeekBar
+                    android:id="@+id/range_seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:progress="1"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_rangeSeekBar"
+                    android:progressDrawable="@drawable/bg_custom_seekbar"
+                    android:thumb="@drawable/seek_icon"
+                    android:splitTrack="false"/>
+
+                 <androidx.appcompat.widget.AppCompatButton
+                     android:id="@+id/btn_apply"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/range_seekBar"
+                     android:layout_marginTop="@dimen/_40sdp"
+                     android:text="APPLY"
+                     android:textColor="@color/white"
+                     android:background="@drawable/button_bg"
+                     android:ems="12"
+                     android:fontFamily="@font/poppins_bold"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_limitedOffers"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/limited_offer_bg"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        >
+
+
+        <TextView
+            android:id="@+id/text_avail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/const_limitedOfferIcon"
+            app:layout_constraintEnd_toEndOf="@+id/const_limitedOfferIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Avail Now*"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#535353"
+            android:fontFamily="@font/dmsens_medium"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/text_valid"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Valid through "
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#535353"
+            android:fontFamily="@font/dmsens_medium"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/text_valid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="31st Dec, 2023"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#535353"
+            android:fontFamily="@font/dmsens_medium"
+            android:maxLines="1"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_limitedOfferIcon"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/text_avail"
+            android:background="@drawable/limited_offer_icon_bg"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/img_limitedOffer"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/interest_img"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintStart_toEndOf="@+id/const_limitedOfferIcon"
+            app:layout_constraintTop_toTopOf="@+id/const_limitedOfferIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/const_limitedOfferIcon"
+            android:background="@drawable/offers_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardElevation="-10dp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                android:layout_margin="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/light_orange">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text_brandName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Burger King"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/dmsens_medium"
+                       android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:id="@+id/text_disSummery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/text_brandName"
+                        app:layout_constraintTop_toBottomOf="@+id/text_brandName"
+                        android:text="Flat 50% off on your first order."
+                        android:maxLines="1"
+                        app:layout_constraintEnd_toStartOf="@+id/text_off"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/dmsens_medium"/>
+
+                    <TextView
+                        android:id="@+id/text_parcentOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="50%"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/dmsens_medium"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/text_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/text_parcentOff"
+                        app:layout_constraintTop_toBottomOf="@+id/text_parcentOff"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:text="off"
+                        android:textSize="@dimen/_11sdp"
+                        android:fontFamily="@font/dmsens_medium"
+                        android:textColor="@color/white"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

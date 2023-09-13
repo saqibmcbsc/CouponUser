@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">O Free</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dropdown_label">discount:</string>
+    <string name="map_api_key">AIzaSyCFSDA4QMxEVmLCt5TjvEUXYSN6V8rK4sM</string>
+
+    <string-array name="discountType">
+        <item>Flat</item>
+        <item>Floating</item>
+    </string-array>
+
+</resources>

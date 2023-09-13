@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/first_fragment"
+        android:contentDescription="alarm tab"
+        android:icon="@drawable/home"
+        app:showAsAction="always"
+        android:title="Home" />
+    <item
+        android:id="@+id/second_fragment"
+        android:contentDescription="bedtime tab"
+        android:icon="@drawable/couponsss"
+        app:showAsAction="always"
+        android:title="Coupons" />
+    <item
+        android:id="@+id/third_fragment"
+        android:contentDescription="stopwatch tab"
+        android:icon="@drawable/review"
+        app:showAsAction="always"
+        android:title="Saved" />
+    <item
+        android:id="@+id/fourth_fragment"
+        android:icon="@drawable/profile"
+        app:showAsAction="always"
+        android:title="Profile" />
+</menu>
